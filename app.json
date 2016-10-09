@@ -8,6 +8,9 @@
     },
     "ENVIRONMENT": {
       "required": true
+    },
+    "DATABASE_URL": {
+      "required": true
     }
   },
   "formation": {
