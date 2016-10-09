@@ -26,14 +26,21 @@ Features dev enviorments (development, staging and production), database url, Pr
 
 ## Deploy on Heroku
 
-* On Heroku set the following enviorment variables:
+1. New app, name, connect to github.
 
-`DATABASE_URL` (postgress)
+2. On Resources > Add-ons, provision a new "Heroku Postgress".
 
-`ENVIRONMENT` (DEVELOPMENT, STAGING or PRODUCTION)
+3. Set the following enviorment variables:
 
-`DJANGO_SECRET_KEY` (generate a new and secret one)
+
+`ENVIRONMENT` set to PRODUCTION (other options are DEVELOPMENT or STAGING)
+
+`DJANGO_SECRET_KEY` generate a new and secret one
+
+`DATABASE_URL` for the postgress instance, heroku automatically fills it.
+
+4. Add Buildpack: `heroku/python`
 
 # Notes
 
-* If DATABASE_URL is empty, Django will use a sqlite3.db
+* If DATABASE_URL is empty, Django will use a sqlite3.db, its the default for local development.
