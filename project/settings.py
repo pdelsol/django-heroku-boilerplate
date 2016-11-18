@@ -130,7 +130,7 @@ class Development(Common):
     DEBUG = True
     Common.TEMPLATES[0]['OPTIONS']['debug'] = DEBUG
 
-    ALLOWED_HOSTS = [".herokuapp.com", ".cforemoto.com"]
+    ALLOWED_HOSTS = [".herokuapp.com"]
 
 
 class Staging(Development):
